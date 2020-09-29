@@ -24,4 +24,4 @@ For  end point http://localhost:8000/login/
   - [Django Restframework](https://www.django-rest-framework.org/)
   - [dotenv](https://github.com/theskumar/python-dotenv)
   - [psycopg2](https://github.com/psycopg/psycopg2)
-### Used Database PostgreSQL
+### Used Database - PostgreSQL
