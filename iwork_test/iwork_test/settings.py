@@ -15,7 +15,7 @@ import os
 # dotenv setup
 from dotenv import load_dotenv 
 from pathlib import Path 
-envPath = Path('../../.env')
+envPath = Path('/home/chapi/Documents/projects/django/drf/JobShowCase/iWork-test/.env')
 load_dotenv(dotenv_path=envPath)
 
 
@@ -32,7 +32,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -45,7 +45,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-    'rest_framework',
+    'rest_framework', # registering rest framework
+    'rest_framework.authtoken',
+    'user' # Registering my app
+    
 ]
 
 MIDDLEWARE = [
