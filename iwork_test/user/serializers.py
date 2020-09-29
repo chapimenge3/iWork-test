@@ -1,6 +1,9 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
 
+# My App import 
+from .models import Item
+
 class UserSerializer(serializers.ModelSerializer):
     token = serializers.CharField(allow_blank=True, required=False)
     class Meta:
@@ -16,4 +19,7 @@ class UserSerializer(serializers.ModelSerializer):
             user.set_password(validated_data['password'])
             user.save()
             return user
-        
+class ItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Item
+        fields = '__all__'
